@@ -242,5 +242,246 @@ TARGETS = [
         'payload': '{"emailAddress":"{email}","name":"{name}","mobileCountryCode":"","mobileNumber":"{number}","birthDate":"2000-01-01","genderId":"1","password":"{pw}","cardNumber":"","referralCode":"","salesmanId":"","pickupStoreCode":"","marketingCode":""}',
         'number_fmt': fmt_08,
         'success_on': ['otp','success','code','already exists']
+    },    
+    {
+        'name': 'Shopee',
+        'post_type': 'json',
+        'url': 'https://id.shopee.com/api/v1/auth/otp',
+        'referer': 'https://shopee.co.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://shopee.co.id'},
+        'payload': '{"phone":"{number}","type":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['success','otp']
     },
+    {
+        'name': 'Tokopedia',
+        'post_type': 'json',
+        'url': 'https://api.tokopedia.com/v1/auth/otp',
+        'referer': 'https://tokopedia.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://tokopedia.com'},
+        'payload': '{"phone":"{number}","channel":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Gojek',
+        'post_type': 'json',
+        'url': 'https://api.gojek.com/v1/auth/otp',
+        'referer': 'https://gojek.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://gojek.com'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Grab',
+        'post_type': 'json',
+        'url': 'https://api.grab.com/v1/auth/otp',
+        'referer': 'https://grab.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://grab.com'},
+        'payload': '{"phone":"{number}","channel":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Dana',
+        'post_type': 'json',
+        'url': 'https://api.dana.id/v1/auth/otp',
+        'referer': 'https://dana.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://dana.id'},
+        'payload': '{"phone":"{number}","type":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'OVO',
+        'post_type': 'json',
+        'url': 'https://api.ovo.id/v1/auth/otp',
+        'referer': 'https://ovo.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://ovo.id'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Gopay',
+        'post_type': 'json',
+        'url': 'https://api.gopay.co.id/v1/auth/otp',
+        'referer': 'https://gopay.co.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://gopay.co.id'},
+        'payload': '{"phone":"{number}","channel":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'LinkAja',
+        'post_type': 'json',
+        'url': 'https://api.linkaja.com/v1/auth/otp',
+        'referer': 'https://linkaja.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://linkaja.com'},
+        'payload': '{"phone":"{number}","type":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'BCA',
+        'post_type': 'json',
+        'url': 'https://api.bca.co.id/v1/auth/otp',
+        'referer': 'https://bca.co.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://bca.co.id'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Mandiri',
+        'post_type': 'json',
+        'url': 'https://api.mandiri.co.id/v1/auth/otp',
+        'referer': 'https://mandiri.co.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://mandiri.co.id'},
+        'payload': '{"phone":"{number}","channel":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'BNI',
+        'post_type': 'json',
+        'url': 'https://api.bni.co.id/v1/auth/otp',
+        'referer': 'https://bni.co.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://bni.co.id'},
+        'payload': '{"phone":"{number}","type":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'BRI',
+        'post_type': 'json',
+        'url': 'https://api.bri.co.id/v1/auth/otp',
+        'referer': 'https://bri.co.id/',
+        'headers': {'Content-Type':'application/json','Origin':'https://bri.co.id'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_08,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Instagram',
+        'post_type': 'json',
+        'url': 'https://api.instagram.com/api/v1/accounts/send_verification_code/',
+        'referer': 'https://instagram.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://instagram.com'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'TikTok',
+        'post_type': 'json',
+        'url': 'https://api.tiktok.com/api/v1/account/verification/',
+        'referer': 'https://tiktok.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://tiktok.com'},
+        'payload': '{"phone":"{number}","channel":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Twitter',
+        'post_type': 'json',
+        'url': 'https://api.twitter.com/1.1/account/update_profile.json',
+        'referer': 'https://twitter.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://twitter.com'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Facebook',
+        'post_type': 'json',
+        'url': 'https://api.facebook.com/restserver.php?method=auth.sendCode',
+        'referer': 'https://facebook.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://facebook.com'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'MobileLegends',
+        'post_type': 'json',
+        'url': 'https://api.mobilelegends.com/v1/auth/otp',
+        'referer': 'https://mobilelegends.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://mobilelegends.com'},
+        'payload': '{"phone":"{number}","type":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'FreeFire',
+        'post_type': 'json',
+        'url': 'https://api.freefire.com/v1/auth/otp',
+        'referer': 'https://freefire.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://freefire.com'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'PUBG',
+        'post_type': 'json',
+        'url': 'https://api.pubg.com/v1/auth/otp',
+        'referer': 'https://pubg.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://pubg.com'},
+        'payload': '{"phone":"{number}","channel":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Tinder',
+        'post_type': 'json',
+        'url': 'https://api.tinder.com/v1/auth/otp',
+        'referer': 'https://tinder.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://tinder.com'},
+        'payload': '{"phone":"{number}","type":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Bumble',
+        'post_type': 'json',
+        'url': 'https://api.bumble.com/v1/auth/otp',
+        'referer': 'https://bumble.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://bumble.com'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Spotify',
+        'post_type': 'json',
+        'url': 'https://api.spotify.com/v1/auth/otp',
+        'referer': 'https://spotify.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://spotify.com'},
+        'payload': '{"phone":"{number}","channel":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Netflix',
+        'post_type': 'json',
+        'url': 'https://api.netflix.com/v1/auth/otp',
+        'referer': 'https://netflix.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://netflix.com'},
+        'payload': '{"phone":"{number}","type":"whatsapp"}',
+        'number_fmt': fmt_plus,
+        'success_on': ['otp','success']
+    },
+    {
+        'name': 'Discord',
+        'post_type': 'json',
+        'url': 'https://api.discord.com/v1/auth/otp',
+        'referer': 'https://discord.com/',
+        'headers': {'Content-Type':'application/json','Origin':'https://discord.com'},
+        'payload': '{"phone":"{number}","method":"whatsapp"}',
+        'number_fmt':  ,
+        'success_on': ['otp','success']
+    }
 ]
+
