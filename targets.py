@@ -480,7 +480,7 @@ TARGETS = [
         'referer': 'https://discord.com/',
         'headers': {'Content-Type':'application/json','Origin':'https://discord.com'},
         'payload': '{"phone":"{number}","method":"whatsapp"}',
-        'number_fmt':  ,
+        'number_fmt': fmt_plus,
         'success_on': ['otp','success']
     }
 ]
